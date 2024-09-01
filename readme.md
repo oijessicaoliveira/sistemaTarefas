@@ -1,0 +1,1 @@
+Projeto da disciplina de Linguagem de Programação II (PHP OO) da FBr, que apresenta um Sistema de Gerenciamento de Tarefas funcional em PHP em conjunto com o HTML, CSS e MySQL.
