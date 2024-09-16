@@ -1,5 +1,5 @@
 <?php
- 
+/* 
 // Microprojeto 01 (Parte I)
 // Definição das variáveis da tarefa
 $titulo_tarefa = "Estudar PHP";
@@ -12,6 +12,7 @@ echo "Título da Tarefa: " . $titulo_tarefa . "<br>";
 echo "Descrição: " . $descricao_tarefa . "<br>";
 echo "Data de Conclusão: " . $data_conclusao . "<br>";
 echo "Status: " . $status_tarefa . "<br>";
+*/
 
 /* 
 // Microprojeto 01 (Parte II)
@@ -24,13 +25,13 @@ $tarefas[] = criarTarefa("Estudar PHP", "Revisar conceitos básicos e avançados
 $tarefas[] = criarTarefa("Desenvolver Projeto", "Criar sistema de gerenciamento de tarefas.", "05/10/2024", "Pendente");
 $tarefas[] = criarTarefa("Praticar JavaScript", "Exercitar lógica de programação com JavaScript.", "01/09/2024", "Concluída");
 
- Exibindo todas as tarefas com lógica de decisão
+//Exibindo todas as tarefas com lógica de decisão
 foreach ($tarefas as $tarefa) {
     exibirTarefa($tarefa);
 }
 */
 
-/*
+
 // Microprojeto 02: Implementação Orientada a Objetos
 require_once 'Tarefa.php';
 require_once 'Categoria.php';
@@ -53,4 +54,3 @@ $usuario1->exibirUsuario();
 $tarefa1->exibirTarefa();
 $tarefa2->exibirTarefa();
 $tarefa3->exibirTarefa();
-*/
