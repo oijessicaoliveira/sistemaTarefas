@@ -1,57 +1,121 @@
-/* styles.css */
+/* Definição de cores principais */
+:root {
+    --cor-fundo: #f3e6f5; /* Lilás claro para o fundo */
+    --cor-destaque: #6a0dad; /* Lilás mais escuro para destaques */
+    --cor-formulario: #ffffff; /* Branco para os campos do formulário */
+    --cor-texto: #333333; /* Cinza escuro para os textos */
+    --cor-botao: #9370db; /* Lilás para o botão */
+    --cor-botao-hover: #6a0dad; /* Lilás escuro para o hover do botão */
+}
 
-/* Estilo global do corpo */
+/* Estilo geral do corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
 }
 
-/* Estilo do contêiner do formulário */
+/* Estilo do container do formulário */
 .form-container {
-    background-color: #fff;
+    background-color: var(--cor-formulario);
     padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 500px;
+    max-width: 100%;
 }
 
-/* Estilo dos grupos de formulário */
+/* Estilo do título do formulário */
+h2 {
+    text-align: center;
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Estilo dos grupos de formulário (rótulos e campos) */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* Estilo dos rótulos */
-.form-group label {
+label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--cor-destaque);
+    font-size: 1.1em;
 }
 
-/* Estilo dos inputs, selects e textareas */
-.form-group input,
-.form-group select,
-.form-group textarea {
+input[type="text"],
+input[type="date"],
+textarea,
+select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: var(--cor-formulario);
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--cor-botao-hover);
+    outline: none;
+}
+
+/* Estilo do campo textarea para manter uma aparência consistente */
+textarea {
+    height: 120px;
+    resize: vertical; /* Permite redimensionamento vertical */
 }
 
 /* Estilo do botão */
-.form-group button {
-    background-color: #5cb85c;
-    color: white;
-    padding: 10px 15px;
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-botao);
+    color: #ffffff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Estilo do botão quando o mouse passa por cima */
-.form-group button:hover {
-    background-color: #4cae4c;
+button[type="submit"]:hover {
+    background-color: var(--cor-botao-hover);
+    transform: translateY(-2px);
+}
+
+/* Adicionando responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    button[type="submit"] {
+        padding: 12px;
+        font-size: 1em;
+    }
 }
